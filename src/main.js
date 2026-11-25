@@ -2,6 +2,7 @@ import "./style.css";
 import { estado } from "./estado.js";
 import { contarPendientes } from "./tareas.js";
 import { contarCompletadas } from "./tareas.js";
+import { render } from "./dom.js";
 
 console.table(estado.tareas);
 
@@ -12,4 +13,8 @@ titulo.classList.add("titulo");
 
 const resumen = document.querySelector("#resumen");
 const pendientes = contarPendientes(estado.tareas);
-resumen.textContent = `Tienes ${pendientes} tareas pendientes`;
+const completadas = contarCompletadas(estado.tareas);
+resumen.textContent = `${completadas} completadas * ${pendientes} pendientes`;
+
+render();
+
