@@ -5,7 +5,11 @@ import { contarCompletadas } from "./tareas.js";
 
 console.table(estado.tareas);
 
+
+const titulo = document.querySelector("h1");
+titulo.textContent += `Gestor de tareas`;
+titulo.classList.add("titulo");
+
+const resumen = document.querySelector("#resumen");
 const pendientes = contarPendientes(estado.tareas);
-document.querySelector("#app").textContent = `Tienes ${pendientes} tareas pendientes`;
-const completadas = contarCompletadas(estado.tareas);
-document.querySelector("#app").textContent += ` y ${completadas} tareas completadas`;
+resumen.textContent = `Tienes ${pendientes} tareas pendientes`;

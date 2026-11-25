@@ -294,3 +294,12 @@ code {
     border-right-color: var(--border);
   }
 }
+
+.titulo{
+  font-weight: bold;
+  color: #aa3bff;
+}
+.completada{
+  text-decoration: line-through;
+  color: rgba(61, 189, 221, 0.234);
+}
