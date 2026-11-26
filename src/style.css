@@ -303,3 +303,10 @@ code {
   text-decoration: line-through;
   color: rgba(61, 189, 221, 0.234);
 }
+
+.aprobado{
+  color: green;
+}
+.suspenso{
+  color: red;
+}
